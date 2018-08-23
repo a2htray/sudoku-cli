@@ -67,7 +67,7 @@ class Board(object):
         # 需要填写信息已完毕
         has_full = len([cell.cover for cell in self.cells if cell.cover <> 0]) == self.need
 
-        print 'has_full', has_full
+        # print 'has_full', has_full
 
         def _true_over(instance):
             print '_true_over'

@@ -1,8 +1,14 @@
 from setuptools import setup
 
 setup(
-    name='sudoku-cli',
-    version='1.0',
+    name='sudokucli',
+    version='0.1.1',
+    author="a2htray",
+    author_email="a2htray.yuen@gmail.com",
+    description="Console 9*9 Sudoku Game",
+    long_description=open("README.rst").read(),
+    license="Apache License 2.0",
+    url="https://github.com/a2htray/sudoku-cli",
     packages=[
         'src',
         'src.commands',
@@ -16,4 +22,5 @@ setup(
         [console_scripts]
         sudokucli=src.cli:cli
     ''',
+    zip_safe=True
 )
