@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='sudokucli',
-    version='0.1.1',
+    version='0.1.2',
     author="a2htray",
     author_email="a2htray.yuen@gmail.com",
     description="Console 9*9 Sudoku Game",

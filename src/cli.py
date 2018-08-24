@@ -25,14 +25,13 @@ class Context(object):
 
 
 pass_context = click.make_pass_decorator(Context, ensure=True)
-cmd_folder = os.path.abspath(os.path.join(os.path.dirname(__file__),
-                                          'commands'))
-
+cmd_folder = os.path.abspath(os.path.join(os.path.dirname(__file__), 'commands'))
 
 class SudokuCLI(click.MultiCommand):
 
     def list_commands(self, ctx):
         rv = []
+        print cmd_folder
         for filename in os.listdir(cmd_folder):
             if filename.endswith('.py') and \
                filename.startswith('cmd_'):
@@ -44,8 +43,7 @@ class SudokuCLI(click.MultiCommand):
         try:
             if sys.version_info[0] == 2:
                 name = name.encode('ascii', 'replace')
-            mod = __import__('src.commands.cmd_' + name,
-                             None, None, ['cli'])
+            mod = __import__('src.commands.cmd_' + name, None, None, ['cli'])
         except ImportError:
             return
         return mod.cli
