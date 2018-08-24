@@ -5,7 +5,9 @@
 ### 步骤
 
 ```bash
-pip install sudokucli
+https://github.com/a2htray/sudoku-cli.git
+cd sudoku-cli
+python setup.py install
 ```
 
 ## 选项
